@@ -1,5 +1,5 @@
 {% set name = "mtenn" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/choderalab/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: b78f6cf8ec9331c6e0772d55dfc7858cb61fd7da562a7bb47423811feddf2db4
+  sha256: 20d04458a9c24b5f45ad92bf828734aa1ab9c10b9d0414b4301dd1a6f7694f13
 
 build:
   noarch: python
@@ -34,6 +34,7 @@ requirements:
     - rdkit
     - ase
     - pytest
+    - pydantic >=1.10.8,<2.0.0a0
 
 test:
   imports:
