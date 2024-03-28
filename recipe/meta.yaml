@@ -1,5 +1,5 @@
 {% set name = "mtenn" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/choderalab/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 7e59c2e2b20485c2ce363a7100c9d16ae8534f6f5988aabaaa07b9b1d1eef6fb
+  sha256: f12dd47a32f543132eedcf4dc8ade8fb9b4869b7c8f256b786754aa2f23f977e
 
 build:
   noarch: python
@@ -35,6 +35,7 @@ requirements:
     - ase
     - pytest
     - pydantic >=1.10.8,<2.0.0a0
+    - fsspec
 
 test:
   imports:
