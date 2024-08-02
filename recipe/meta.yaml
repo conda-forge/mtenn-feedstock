@@ -1,5 +1,5 @@
 {% set name = "mtenn" %}
-{% set version = "0.5.2" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/choderalab/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: f12dd47a32f543132eedcf4dc8ade8fb9b4869b7c8f256b786754aa2f23f977e
+  sha256: 9c8443596eb89d5015f5911e3da5a31c86be140f1d18ea60033547948ae3aa67
 
 build:
   noarch: python
