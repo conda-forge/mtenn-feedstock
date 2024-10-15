@@ -1,5 +1,5 @@
 {% set name = "mtenn" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -14,10 +14,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
+    - setuptools
     - pip
     - python >=3.6
     - versioningit
