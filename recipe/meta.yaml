@@ -1,5 +1,7 @@
 {% set name = "mtenn" %}
 {% set version = "0.6.2" %}
+{% set python_min = "3.10" %}
+
 
 package:
   name: {{ name|lower }}
@@ -14,16 +16,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - setuptools
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - versioningit
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - pytorch
     - pytorch_geometric
     - pytorch_cluster
@@ -46,6 +48,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   commands:
     - python -Ic "import mtenn; print(mtenn.__version__)"
     - pytest -v --pyargs mtenn
