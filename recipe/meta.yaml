@@ -1,5 +1,5 @@
 {% set name = "mtenn" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 {% set python_min = "3.10" %}
 
 
@@ -39,7 +39,7 @@ requirements:
     - rdkit
     - ase
     - pytest
-    - pydantic >=1.10.8,<2.0.0a0
+    - pydantic >=2.0.0a0
     - fsspec
 
 test:
